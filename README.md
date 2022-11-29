@@ -1,3 +1,14 @@
+# Project Status
+I spent 2 days on this trying to get it working. I am working in areas that I have not worked in before so it was a really good learning experience for me. I learned things about ROS2 that I will be able to use in my own projects. 
+The first problem I had is that the command to build the support for the new messages was missing from the examples I was working from and it took me .5 of a day to find the line to add to the CMakeList file. Once I found that the rest built fairly quickly. I had the ROS2 server code talking to the simulator Python code over sockets quickly. 
+The next and biggest issue that I was unable to find the solution for is that the client is able to send a request and the server will ask the Python simulator for data and respond to the client with the data it received, but the client never gets the data. I am unsure if this is an issue with the client threading not processing the received data or some type of communication issue. 
+With that issue unresolved I did not get on to running a second server. 
+After trying so many different things from various examples I found the code is not as clean and commented as I would like. 
+The system I am using for ROS2 development is a small PC with a Celeron processor so it was unable to run the client at 500Hz as the rest of the system would stop responding when I did. This may become an issue for the project I am wanting to use this machine for. That also may have been the cause of some of the problems I am having. My other ROS2 system is Raspberry Pi and I don't think it would have worked any better. 
+I wish I had a working solution but it looks like I am missing something. All the code builds and runs but not with the expected results. I think if I was working as part of a team that someone looking over my code would be able to point out what the piece is that I am missing. 
+
+
+
 # Robotic_HW
 ## Context
 The design of our cells in Machina Labs has evolved over the past years. Currently, each of our cells has two articulated industrial robots on rails (a total of 7 axes) and a frame with hydraulic clamps. For the parts to form correctly, we must exert and maintain a dynamic force during the forming in a very accurate location in space. Currently, each robot is equipped with a load cell. See a quick video about our process [here](https://www.youtube.com/watch?v=iqYMprTEXRI). We are using ROS2 to collect the data from the network and control the robots in real-time. As a robotic engineer, we keep developing different modules for our network to add features to the system.  
