@@ -1,0 +1,6 @@
+# The Sensor Data service returns a list of data of the
+# size in the request 
+
+byte sensordatapoints
+---
+byte[] sensordata
